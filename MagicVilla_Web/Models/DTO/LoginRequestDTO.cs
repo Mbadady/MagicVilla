@@ -1,5 +1,5 @@
 ﻿using System;
-namespace MagicVilla_VillaAPI.Model.DTO
+namespace MagicVilla_Web.Models.DTO
 {
 	public class LoginRequestDTO
 	{

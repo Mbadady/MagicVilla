@@ -3,13 +3,17 @@ using MagicVilla_Web.Models.DTO;
 
 namespace MagicVilla_Web.Services.IServices
 {
-	public interface IVillaService
+	public interface IVillaNumberService
 	{
-		Task<T> GetAllVillaAsync<T>();
-		Task<T> GetVillaAsync<T>(int id);
-		Task<T> DeleteVillaAsync<T>(int id);
-		Task<T> CreateVillaAsync<T>(VillaCreateDTO createDTO);
-		Task<T> UpdateVillaAsync<T>(VillaUpdateDTO updateDTO);
+		Task<T> GetAllVillaNumberAsync<T>(string token);
+
+		Task<T> GetVillaNumberAsync<T>(int villaNo, string token);
+
+		Task<T> DeleteVillaNumberAsync<T>(int villaNo, string token);
+
+		Task<T> CreateVillaNumberAsync<T>(VillaNumberCreateDTO createDTO, string token);
+
+		Task<T> UpdateVillaNumberAsync<T>(VillaNumberUpdateDTO updateDTO, string token);
 
 	}
 }

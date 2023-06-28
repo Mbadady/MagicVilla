@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "JCxo24zC4SQ/ckjjqhSIn2IIJZ1keswQik7XDEdJsb2vIM3mKBXYI7B5VoLKyqA/Oe28vHZhCunXacDX3OKCBw==",
+  "success": true,
+  "projectFilePath": "/Users/mac/Desktop/C#/MagicVilla/MagicVilla_Web/MagicVilla_Web.csproj",
+  "expectedPackageFiles": [
+    "/Users/mac/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/mac/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.aspnetcore.jsonpatch/7.0.7/microsoft.aspnetcore.jsonpatch.7.0.7.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/7.0.7/microsoft.aspnetcore.mvc.newtonsoftjson.7.0.7.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/mac/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

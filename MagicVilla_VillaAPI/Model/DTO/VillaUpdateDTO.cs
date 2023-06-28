@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MagicVilla_VillaAPI.Model.DTO
 {
-	public class VillaDTO
+	public class VillaUpdateDTO
 	{
 		public int Id { get; set; }
 

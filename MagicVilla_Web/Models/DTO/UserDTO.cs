@@ -1,7 +1,7 @@
 ﻿using System;
-namespace MagicVilla_VillaAPI.Model
+namespace MagicVilla_Web.Models.DTO
 {
-	public class LocalUser
+	public class UserDTO
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
