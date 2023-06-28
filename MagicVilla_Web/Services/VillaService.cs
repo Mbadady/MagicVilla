@@ -1,4 +1,5 @@
 ﻿using System;
+using MagicVilla_Utility;
 using MagicVilla_Web.Models;
 using MagicVilla_Web.Models.DTO;
 using MagicVilla_Web.Services.IServices;
@@ -23,7 +24,7 @@ namespace MagicVilla_Web.Services
             return SendAsync<T>(new APIRequest()
             {
              ApiType = MagicVilla_Utility.SD.ApiType.POST,
-             Url = _villaUrl + "/api/VillaApi",
+             Url = _villaUrl + "/api/" + SD._version + "/VillaApi",
              Data = createDTO,
              Token = token
             });
@@ -34,7 +35,7 @@ namespace MagicVilla_Web.Services
             return SendAsync<T>(new APIRequest()
             {
                 ApiType = MagicVilla_Utility.SD.ApiType.DELETE,
-                Url = _villaUrl + "/api/VillaApi/" + id,
+                Url = _villaUrl + "/api/" + SD._version + "/VillaApi/" + id,
             Token = token
             });
         }
@@ -43,8 +44,8 @@ namespace MagicVilla_Web.Services
         {
             return SendAsync<T>(new APIRequest()
             {
-                ApiType = MagicVilla_Utility.SD.ApiType.GET,
-                Url = _villaUrl + "/api/VillaApi",
+                ApiType = SD.ApiType.GET,
+                Url = _villaUrl + "/api/" + SD._version + "/VillaApi",
                Token = token
             });
         }
@@ -53,8 +54,8 @@ namespace MagicVilla_Web.Services
         {
             return SendAsync<T>(new APIRequest()
             {
-                ApiType = MagicVilla_Utility.SD.ApiType.GET,
-                Url = _villaUrl + "/api/VillaApi/" + id,
+                ApiType = SD.ApiType.GET,
+                Url = _villaUrl + "/api/" + SD._version + "/VillaApi/" + id,
                 Token = token
             });
         }
@@ -63,8 +64,8 @@ namespace MagicVilla_Web.Services
         {
             return SendAsync<T>(new APIRequest()
             {
-                ApiType = MagicVilla_Utility.SD.ApiType.PUT,
-                Url = _villaUrl + "/api/VillaApi/" + updateDTO.Id,
+                ApiType = SD.ApiType.PUT,
+                Url = _villaUrl + "/api/" + SD._version + "/VillaApi/" + updateDTO.Id,
                 Data = updateDTO,
                 Token = token
             });

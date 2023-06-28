@@ -24,6 +24,8 @@
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +36,8 @@
     <None Remove="MappingConfig\" />
     <None Remove="Repository\" />
     <None Remove="Repository\IRepository\" />
+    <None Remove="Controllers\v1\" />
+    <None Remove="Controllers\v2\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
@@ -43,5 +47,7 @@
     <Folder Include="MappingConfig\" />
     <Folder Include="Repository\" />
     <Folder Include="Repository\IRepository\" />
+    <Folder Include="Controllers\v1\" />
+    <Folder Include="Controllers\v2\" />
   </ItemGroup>
 </Project>

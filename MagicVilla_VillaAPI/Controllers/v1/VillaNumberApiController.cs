@@ -14,10 +14,11 @@ using System.Net;
 using Microsoft.AspNetCore.Authorization;
 using System.Data;
 
-namespace MagicVilla_VillaAPI.Controllers
+namespace MagicVilla_VillaAPI.Controllers.v1
 {
-    [Route("api/VillaNumberApi")]
+    [Route("api/v{version:apiVersion}/VillaNumberApi")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class VillaNumberApiController : ControllerBase
     {
     

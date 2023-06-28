@@ -11,6 +11,6 @@ public class SD
 	}
 
 	public static string _sessionToken = "JWTToken";
-
+    public static string _version = "v1";
 }
 

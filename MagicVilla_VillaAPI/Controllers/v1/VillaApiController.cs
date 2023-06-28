@@ -15,14 +15,13 @@ using MagicVilla_VillaAPI.Repository.IRepository;
 using System.Net;
 using Microsoft.AspNetCore.Authorization;
 
-namespace MagicVilla_VillaAPI.Controllers
+namespace MagicVilla_VillaAPI.Controllers.v1
 {
 
-
-
     //[Route("api/[controller]")]
-    [Route("api/VillaApi")]
+    [Route("api/v{version:apiVersion}/VillaApi")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class VillaApiController : ControllerBase
     {
         private readonly ILogger<VillaApiController> _logger;

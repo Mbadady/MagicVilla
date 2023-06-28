@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FWPd2UzGCSJiXgoyTNq0JRTOZWfK50SE/Pw1kS3/wZAc6wu4+Bmg7U/0WdCqFGqBEBnA6goNYRx4ohavRgL/kw==",
+  "dgSpecHash": "PhZZyDbhtw0RjGNXK4bCEQvAsh7Ez0av9tjuSHteD9D/ziM7L+K1Eus2L2QDXC8YyC0PH4QEUF/sm9HsLUawsg==",
   "success": true,
   "projectFilePath": "/Users/mac/Desktop/C#/MagicVilla/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,8 @@
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/7.0.8/microsoft.aspnetcore.authentication.jwtbearer.7.0.8.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.jsonpatch/7.0.5/microsoft.aspnetcore.jsonpatch.7.0.5.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/7.0.5/microsoft.aspnetcore.mvc.newtonsoftjson.7.0.5.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.aspnetcore.mvc.versioning/5.1.0/microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.aspnetcore.mvc.versioning.apiexplorer/5.1.0/microsoft.aspnetcore.mvc.versioning.apiexplorer.5.1.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.openapi/7.0.5/microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.razor.language/6.0.0/microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.bcl.asyncinterfaces/5.0.0/microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
