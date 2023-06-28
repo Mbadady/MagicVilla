@@ -29,7 +29,13 @@ var key = builder.Configuration.GetValue<string>("ApiSettings:Secret");
 //builder.Services.AddSingleton<ILogging, Logging>();
 
 // AddNewtonsoftJson is for patching
-builder.Services.AddControllers().AddNewtonsoftJson();
+builder.Services.AddControllers(options =>
+{
+    options.CacheProfiles.Add("Default30", new CacheProfile()
+    {
+        Duration = 30
+    });
+}).AddNewtonsoftJson();
 //builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
@@ -133,6 +139,8 @@ builder.Services.AddVersionedApiExplorer(options =>
 });
 
 builder.Services.AddAutoMapper(typeof(Mapping));
+
+builder.Services.AddResponseCaching();
 
 var app = builder.Build();
 
