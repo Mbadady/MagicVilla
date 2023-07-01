@@ -14,6 +14,7 @@ using AutoMapper;
 using MagicVilla_VillaAPI.Repository.IRepository;
 using System.Net;
 using Microsoft.AspNetCore.Authorization;
+using System.Text.Json;
 
 namespace MagicVilla_VillaAPI.Controllers.v1
 {
@@ -47,7 +48,8 @@ namespace MagicVilla_VillaAPI.Controllers.v1
 
         [HttpGet]
         [ResponseCache(CacheProfileName = "Default30")]
-        public async Task<ActionResult<APIResponse>> GetVillas([FromQuery]int occupancy)
+        public async Task<ActionResult<APIResponse>> GetVillas([FromQuery]int? occupancy,
+            [FromQuery]string? search, int pageSize = 0, int pageNumber = 1)
         {
             try
             {
@@ -67,15 +69,21 @@ namespace MagicVilla_VillaAPI.Controllers.v1
 
                 if(occupancy > 0)
                 {
-                    villaList = await _dbVilla.GetAllAsync(u => u.Occupancy == occupancy);
+                    villaList = await _dbVilla.GetAllAsync(u => u.Occupancy == occupancy, pageSize: pageSize, pageNumber: pageNumber);
                 }
 
                 else
                 {
                     villaList = await _dbVilla.GetAllAsync();
                 }
-                    
 
+                if (!string.IsNullOrEmpty(search))
+                {
+                    villaList = villaList.Where(u => u.Name.ToLower().Contains(search) || u.Amenity.ToLower().Contains(search));
+                }
+
+                Pagination pagination = new Pagination() { PageNumber = pageNumber, PageSize = pageSize };
+                Response.Headers.Add("X-Pagination", JsonSerializer.Serialize(pagination));
                 _response.Result = _mapper.Map<List<VillaDTO>>(villaList);
                 _response.StatusCode = HttpStatusCode.OK;
                 //AutoMapper 

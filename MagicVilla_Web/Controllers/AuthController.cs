@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using MagicVilla_Utility;
 using MagicVilla_Web.Models;
@@ -40,12 +41,17 @@ namespace MagicVilla_Web.Controllers
             {
                 LoginResponseDTO model = JsonConvert.DeserializeObject<LoginResponseDTO>(Convert.ToString(result.Result));
 
-                // To tell HttpContext that this user is logged in
+                var handler = new JwtSecurityTokenHandler();
 
+                var jwt = handler.ReadJwtToken(model.Token);
+
+                // To tell HttpContext that this user is logged in
                 var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
 
-                identity.AddClaim(new Claim(ClaimTypes.Name, model.User.Username));
-                identity.AddClaim(new Claim(ClaimTypes.Role, model.User.Role));
+                //identity.AddClaim(new Claim(ClaimTypes.Name, model.User.Username));
+                // OR
+                identity.AddClaim(new Claim(ClaimTypes.Name, jwt.Claims.FirstOrDefault(u => u.Type == "unique_name").Value));
+                identity.AddClaim(new Claim(ClaimTypes.Role, jwt.Claims.FirstOrDefault(u => u.Type == "role").Value));
 
                 var principal = new ClaimsPrincipal(identity);
 

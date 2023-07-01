@@ -15,7 +15,7 @@ namespace MagicVilla_VillaAPI.Repository.IRepository
 
 		Task SaveAsync();
 
-		Task<List<Villa>> GetAllAsync(Expression<Func<Villa, bool>> filter = null);
+		Task<List<Villa>> GetAllAsync(Expression<Func<Villa, bool>> filter = null, int pageSize = 0, int pageNumber = 1);
 
 		Task<Villa> GetAsync(Expression<Func<Villa, bool>> filter = null, bool tracked = true);
 

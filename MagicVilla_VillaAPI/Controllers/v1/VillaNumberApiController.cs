@@ -39,13 +39,13 @@ namespace MagicVilla_VillaAPI.Controllers.v1
         // GET: api/VillaNumberApi
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<APIResponse>> GetVillaNumbers()
+        public async Task<ActionResult<APIResponse>> GetVillaNumbers(int pageSize = 0, int pageNumber = 1)
         {
             try
             {
                 //return await _db.VillaNumbers.ToListAsync();
 
-                IEnumerable<VillaNumber> villaNumbers = await _villaNumber.GetAllVillaNumberAsync(includeProperties: "Villa");
+                IEnumerable<VillaNumber> villaNumbers = await _villaNumber.GetAllVillaNumberAsync(includeProperties: "Villa", pageSize: pageSize, pageNumber: pageNumber);
             
                 if (villaNumbers == null)
                 {

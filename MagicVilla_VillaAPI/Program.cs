@@ -2,9 +2,11 @@
 using MagicVilla_VillaAPI.DataStore;
 using MagicVilla_VillaAPI.Logging;
 using MagicVilla_VillaAPI.MappingConfig;
+using MagicVilla_VillaAPI.Model;
 using MagicVilla_VillaAPI.Repository;
 using MagicVilla_VillaAPI.Repository.IRepository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -141,6 +143,12 @@ builder.Services.AddVersionedApiExplorer(options =>
 builder.Services.AddAutoMapper(typeof(Mapping));
 
 builder.Services.AddResponseCaching();
+
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+//builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+//    .AddEntityFrameworkStores<ApplicationDbContext>();
 
 var app = builder.Build();
 
