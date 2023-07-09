@@ -45,6 +45,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
     option.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddAuthentication(x =>
 {
@@ -144,8 +146,7 @@ builder.Services.AddAutoMapper(typeof(Mapping));
 
 builder.Services.AddResponseCaching();
 
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+
 
 //builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 //    .AddEntityFrameworkStores<ApplicationDbContext>();

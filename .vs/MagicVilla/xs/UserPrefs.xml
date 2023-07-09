@@ -1,24 +1,14 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{D8F6BFE5-336A-4E29-BD61-96F5C08CC5F2}|https">
-  <MultiItemStartupConfigurations>
-    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
-      <Items>
-        <StartupItem ItemId="{D8F6BFE5-336A-4E29-BD61-96F5C08CC5F2}" ItemName="MagicVilla_VillaAPI" ConfigurationId="https" />
-        <StartupItem ItemId="{1B820390-CD0F-4A10-AF9D-86F6F89AA450}" ItemName="MagicVilla_Web" ConfigurationId="https" />
-      </Items>
-    </MultiItemSolutionRunConfiguration>
-  </MultiItemStartupConfigurations>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/WeatherForecast.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/Model/APIResponse.cs">
     <Files>
       <File FileName="MagicVilla_VillaAPI/Repository/UserRepository.cs" />
-      <File FileName="MagicVilla_VillaAPI/Repository/VillaRepository.cs" />
-      <File FileName="MagicVilla_VillaAPI/Controllers/v1/VillaApiController.cs" Line="269" Column="37" />
-      <File FileName="MagicVilla_VillaAPI/Program.cs" />
+      <File FileName="MagicVilla_VillaAPI/Repository/VillaRepository.cs" Line="66" Column="1" />
+      <File FileName="MagicVilla_VillaAPI/Controllers/v1/VillaApiController.cs" Line="266" Column="1" />
+      <File FileName="MagicVilla_VillaAPI/Program.cs" Line="49" Column="55" />
       <File FileName="MagicVilla_VillaAPI/DataStore/ApplicationDbContext.cs" />
-      <File FileName="MagicVilla_VillaAPI/Model/APIResponse.cs" />
+      <File FileName="MagicVilla_VillaAPI/Model/APIResponse.cs" Line="9" Column="1" />
       <File FileName="MagicVilla_VillaAPI/Model/DTO/VillaDTO.cs" />
       <File FileName="MagicVilla_VillaAPI/Repository/VillaNumberRepository.cs" />
       <File FileName="MagicVilla_Web/Controllers/VillaController.cs" />
@@ -35,7 +25,7 @@
       <File FileName="MagicVilla_VillaAPI/Model/DTO/RegistrationDTO.cs" />
       <File FileName="MagicVilla_VillaAPI/MappingConfig/Mapping.cs" />
       <File FileName="MagicVilla_VillaAPI/Repository/IRepository/IUserRepository.cs" />
-      <File FileName="MagicVilla_VillaAPI/WeatherForecast.cs" Line="13" Column="7" />
+      <File FileName="MagicVilla_VillaAPI/WeatherForecast.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -48,23 +38,31 @@
               <Node name="DataStore" expanded="True" />
               <Node name="Model" expanded="True">
                 <Node name="DTO" expanded="True" />
+                <Node name="APIResponse.cs" selected="True" />
               </Node>
               <Node name="Repository" expanded="True">
                 <Node name="IRepository" expanded="True" />
               </Node>
-              <Node name="WeatherForecast.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{D8F6BFE5-336A-4E29-BD61-96F5C08CC5F2}" ItemName="MagicVilla_VillaAPI" ConfigurationId="https" />
+        <StartupItem ItemId="{1B820390-CD0F-4A10-AF9D-86F6F89AA450}" ItemName="MagicVilla_Web" ConfigurationId="https" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/mac/Desktop/C#/MagicVilla/MagicVilla_Web/Controllers/VillaController.cs" relfile="MagicVilla_Web/Controllers/VillaController.cs" line="88" column="1" />
       <Breakpoint file="/Users/mac/Desktop/C#/MagicVilla/MagicVilla_VillaAPI/Repository/VillaRepository.cs" relfile="MagicVilla_VillaAPI/Repository/VillaRepository.cs" line="63" column="1" />
-      <Breakpoint file="/Users/mac/Desktop/C#/MagicVilla/MagicVilla_VillaAPI/Repository/VillaRepository.cs" relfile="MagicVilla_VillaAPI/Repository/VillaRepository.cs" line="70" column="1" />
-      <Breakpoint file="/Users/mac/Desktop/C#/MagicVilla/MagicVilla_VillaAPI/Repository/VillaRepository.cs" relfile="MagicVilla_VillaAPI/Repository/VillaRepository.cs" line="75" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
